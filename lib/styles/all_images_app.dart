@@ -8,5 +8,6 @@ class AppImages{
   static const String onboarding5 = "assets/images/shopping-onboarding5.svg";
   static const String google = "assets/images/google.png";
   static const String apple = "assets/images/appstore.png";
+  static const String figurePrint = "assets/images/fingerprint.png";
 
 }
