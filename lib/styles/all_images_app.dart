@@ -9,5 +9,5 @@ class AppImages{
   static const String google = "assets/images/google.png";
   static const String apple = "assets/images/appstore.png";
   static const String figurePrint = "assets/images/fingerprint.png";
-
+  static const String userPhoto = "assets/images/man.png";
 }

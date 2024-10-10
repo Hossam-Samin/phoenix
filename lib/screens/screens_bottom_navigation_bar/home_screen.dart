@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:phoenix/widgets/drawer_widget.dart';
 
 import '../../widgets/custom_textfield.dart';
 
@@ -11,9 +12,12 @@ class AlertsScreen extends StatefulWidget {
 
 class _AlertsScreenState extends State<AlertsScreen> {
   final TextEditingController searchController = TextEditingController();
+  final GlobalKey<ScaffoldState> drawerKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      key: drawerKey,
+      drawer: const DrawerWidget(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -44,7 +48,7 @@ class _AlertsScreenState extends State<AlertsScreen> {
                       borderRadius: BorderRadius.circular(18),
                       color: Colors.indigo.withOpacity(.4)),
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () => drawerKey.currentState!.openDrawer(),
                     icon: const FaIcon(FontAwesomeIcons.sliders, size: 20,color: Colors.white),
                   ),
                 ),
